@@ -37,7 +37,14 @@
           <h2 id="abstract">Abstract</h2>
           <div style="text-align:left">
 
-            <p>Deep learning has significantly advanced melody generation, but generating melodies with coherent long-term structure remains an important challenge. Previous studies typically employ single-stage end-to-end models or utilize two-stage frameworks that leverage structural similarity (e.g., repetition and variation) to guide the melody generation process, with both approaches often treating each musical event equally. In this paper, we present WuYun, a novel skeleton-guided two-stage melody generation framework with transformers. It first generates the most structurally important notes to construct a melodic skeleton and then infills this skeleton with decorative notes to create a full-fledged melody. Specifically, we propose a knowledge-based and data-driven method to effectively extract melodic skeletons from three aspects (meter, rhythm, and harmony). To mitigate the problem of error accumulation in the two-stage method, we introduce a skeleton ranker and use pre-training methods to enhance our model's robustness. Both subjective and objective results demonstrate that WuYun generates melodies with improved long-term structure and musicality, significantly outperforming other state-of-the-art methods.</p>
+            <p>Deep learning has significantly advanced melody generation, but generating structured melodies remains an important challenge.
+              Previous works often use either single-stage models, which directly map inputs to outputs, or two-stage frameworks that incorporate structural similarities, such as repetition and variation, for melody generation.
+              However, both approaches ignore the explicit differentiation of musical events' structural importance when modeling melodic hierarchical structure.
+              In this paper, we introduce WuYun, a novel two-stage Transformer-based melody generation framework guided by melodic skeletons. 
+              The framework first constructs the melodic skeleton by generating structurally important notes and subsequently realizes melodic prolongation by infilling the skeleton with decorative notes, facilitating complete melody creation.
+              Specifically, we propose a knowledge-based and data-driven method to effectively identify and extract notes of significant structural importance from three aspects: meter, rhythm, and harmony, thus forming the melodic skeleton.
+              The extracted skeletons serve a dual purpose: they are used to train an autoregressive model for generating new melodic skeletons and to provide structural guidance for melody generation.
+              Both subjective and objective results demonstrate that WuYun generates melodies with improved long-term structure and musicality, outperforming other state-of-the-art methods.</p>
 
             <br>
 
